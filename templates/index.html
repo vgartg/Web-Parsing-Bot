@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div class="welcome-text">Добро пожаловать, {{ username }}!</div>
+            <a href="{{ url_for('logout') }}" class="logout-btn">Выйти</a>
+        </div>
+        
+        <div class="content">
+            <div class="generate-section">
+                <button class="generate-btn" onclick="generateCode()">Сгенерировать Код</button>
+            </div>
+            
+            <div class="code-section">
+                <h3>Ваш код:</h3>
+                <div class="code-display" id="codeDisplay">---</div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
