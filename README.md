@@ -8,10 +8,8 @@ user
 [![CI](https://github.com/vgartg/Web-Parsing-Bot/actions/workflows/ci.yml/badge.svg)](https://github.com/vgartg/Web-Parsing-Bot/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Flask-3.x-000000?logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
-[![python-telegram-bot](https://img.shields.io/badge/python--telegram--bot-21.x-26A5E4?logo=telegram&logoColor=white)](https://python-telegram-bot.org/)
 [![Selenium](https://img.shields.io/badge/Selenium-4.x-43B02A?logo=selenium&logoColor=white)](https://www.selenium.dev/)
-[![Ruff](https://img.shields.io/badge/lint-ruff-261230)](https://docs.astral.sh/ruff/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE.txt)
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](LICENSE.txt)
 
 ## Features
 
@@ -141,7 +139,3 @@ secret key, the default credentials in `.env.example`, and the open CORS
 posture on `/generate_code` are all deliberately permissive. If you point this
 at anything that matters, change every default and put the service behind a
 real reverse proxy with TLS
-
-## License
-
-Released under the [MIT License](LICENSE.txt)
