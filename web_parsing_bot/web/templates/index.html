@@ -12,12 +12,12 @@
             <div class="welcome-text">Добро пожаловать, {{ username }}!</div>
             <a href="{{ url_for('logout') }}" class="logout-btn">Выйти</a>
         </div>
-        
+
         <div class="content">
             <div class="generate-section">
-                <button class="generate-btn" onclick="generateCode()">Сгенерировать Код</button>
+                <button id="generateBtn" class="generate-btn" onclick="generateCode()">Сгенерировать Код</button>
             </div>
-            
+
             <div class="code-section">
                 <h3>Ваш код:</h3>
                 <div class="code-display" id="codeDisplay">---</div>

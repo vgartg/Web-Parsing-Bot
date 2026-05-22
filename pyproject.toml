@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "web-parsing-bot"
+version = "1.0.0"
+description = "Flask code service plus a Telegram bot that fetches codes via Selenium — a pet project for learning web parsing"
+readme = "README.md"
+license = { file = "LICENSE.txt" }
+authors = [{ name = "Valery Gorbanev" }]
+requires-python = ">=3.11"
+keywords = ["telegram", "bot", "selenium", "flask", "web-parsing", "pet-project"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Framework :: Flask",
+    "Topic :: Internet :: WWW/HTTP :: Browsers",
+    "Topic :: Communications :: Chat",
+]
+dependencies = [
+    "flask>=3.0",
+    "python-telegram-bot>=21.0",
+    "selenium>=4.20",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.5",
+]
+
+[project.scripts]
+web-parsing-bot = "web_parsing_bot.__main__:main"
+web-parsing-service = "web_parsing_bot.web.service:main"
+
+[tool.setuptools.packages.find]
+include = ["web_parsing_bot*"]
+
+[tool.setuptools.package-data]
+"web_parsing_bot.web" = ["templates/*.html", "static/css/*.css", "static/js/*.js"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
